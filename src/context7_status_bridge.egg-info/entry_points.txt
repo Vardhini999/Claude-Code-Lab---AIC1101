@@ -1,0 +1,2 @@
+[console_scripts]
+status-bridge = status_bridge.cli:main
