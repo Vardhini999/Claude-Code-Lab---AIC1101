@@ -5,7 +5,6 @@ from pathlib import Path
 
 from status_bridge.config import DATABASE_PATH
 
-
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS incidents (
     id TEXT PRIMARY KEY,

@@ -8,6 +8,7 @@ from status_bridge.api.health import router as health_router
 from status_bridge.api.incidents import router as incidents_router
 from status_bridge.db import get_connection, initialize_db
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     initialize_db(get_connection())

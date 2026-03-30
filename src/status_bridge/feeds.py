@@ -28,7 +28,10 @@ def statuspage_to_incidents(payload: dict, source: str = "statuspage") -> list[I
                 title=row["name"],
                 impact=row.get("impact", "unknown"),
                 status=row.get("status", "unknown"),
-                component_names=[component.get("name", "unknown") for component in row.get("components", [])],
+                component_names=[
+                    component.get("name", "unknown") 
+                    for component in row.get("components", [])
+                ],
                 started_at=row["created_at"],
                 resolved_at=row.get("resolved_at"),
             )

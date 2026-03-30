@@ -15,7 +15,16 @@ class IncidentRepository:
         for incident in incidents:
             self.connection.execute(
                 """
-                INSERT INTO incidents (id, source, title, impact, status, component_names, started_at, resolved_at)
+                INSERT INTO incidents (
+                    id,
+                    source, 
+                    title, 
+                    impact, 
+                    status, 
+                    component_names, 
+                    started_at, 
+                    resolved_at
+                )
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
